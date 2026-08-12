@@ -33,11 +33,11 @@ wifi_cc_defaults {
     soong_config_variables: {
         board_wlan_device: {
             emulator: {
-                static_libs: ["lib_driver_cmd_simulated_cf_bp"],
+                whole_static_libs: ["lib_driver_cmd_simulated_cf_bp"],
             },
             // TODO(b/295186835): Convert lib_driver_cmd_* to soong
             conditions_default: {
-                static_libs: ["lib_driver_cmd_fallback"],
+                whole_static_libs: ["lib_driver_cmd_fallback"],
             },
         }
     }

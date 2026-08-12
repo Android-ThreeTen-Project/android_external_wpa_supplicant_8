@@ -25,7 +25,7 @@ package {
 
 cc_defaults {
     name: "lib_vendor_wpa_supplicant",
-    static_libs: select(soong_config_variable("wifi", "board_wlan_device"), {
+    whole_static_libs: select(soong_config_variable("wifi", "board_wlan_device"), {
         "emulator": ["lib_driver_cmd_simulated_cf_bp"],
         // TODO(b/295186835): Convert lib_driver_cmd_* to soong
         default: ["lib_driver_cmd_fallback"],
